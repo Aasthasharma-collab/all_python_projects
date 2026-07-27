@@ -9,7 +9,7 @@ def proccessing_leaderboard(scores):
     milestone=[score for score in scores if score >=100]
     print(f"milestone(100+): {milestone}")
 
-def score_statics(score_list):
+def score_statistics(score_list):
     if not score_list:
         return
 

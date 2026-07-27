@@ -36,32 +36,32 @@ for item in selected_items:
     if item in items:
         valid_items.append(item)
     else:
-        print("kone")
-
-
+        print(f"{item}kone")
 
 if not valid_items:
     print("abanu his khtm huyo , sham tk ahjajiyo")
 else:
-    name = input("naam bolo: ")
-    print("recipt lelo")
+    item_quantities = {}
+    for item in valid_items:
+        try:
+            qty = int(input(f"khatri for {item}: "))
+            if qty > 0:
+                item_quantities[item] = qty
+            else:
+                print(f"invalid quantity for {item}, skipping!")
+        except ValueError:
+            print(f"invalid quantity for {item}, skipping!")
+    if item_quantities:
+        name = input("naam bolo: ")
+        print("recipt lelo")
 
-    print("========================================")
-    print(f"           {name.upper()}         ")
+        print("========================================")
+        print(f"           {name.upper()}         ")
     print("           OFFICIAL RECEIPT                 ")
     print("========================================")
 
     subtotal = 0
-    for item in valid_items:
-        try:
-            qty = int(input(f"khatri {item}: "))
-            if qty <= 0:
-                raise ValueError
-            print("lo sa")
-        except ValueError:
-            print("invalid quantity, please enter a positive number")
-            continue
-
+    for item, qty in item_quantities.items():
         item_price = items[item]
         item_total = item_price * qty
         subtotal += item_total

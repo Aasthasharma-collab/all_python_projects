@@ -40,3 +40,4 @@ try:
     if result is not None:        print("Result:", result)
 except ValueError:
     print("Invalid input! Please enter numeric values.")
+    print("otherwise it won't work")

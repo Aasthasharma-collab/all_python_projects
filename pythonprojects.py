@@ -1199,88 +1199,112 @@
 
 # del class8["aastha"]
 # print(class8)
-import time 
+# import time 
 
-print("----welcome to the store----")
+# print("----welcome to the store----")
 
-current_time = time.localtime()
+# current_time = time.localtime()
 
-if current_time.tm_hour >= 0 and current_time.tm_hour < 12:
-    print("jai shaiya ram")
-elif current_time.tm_hour >= 12 and current_time.tm_hour < 18:
-    print("jai shaiya ram")
-else :
-    print("jai shaiya ram")
+# if current_time.tm_hour >= 0 and current_time.tm_hour < 12:
+#     print("jai shaiya ram")
+# elif current_time.tm_hour >= 12 and current_time.tm_hour < 18:
+#     print("jai shaiya ram")
+# else :
+#     print("jai shaiya ram")
 
-items = {
-    "milk": 60,
-    "bread": 40,
-    "eggs": 90,
-    "butter": 250,
-    "cheese": 180,
-    "rice": 80,
-    "flour": 45,
-    "sugar": 42,
-    "apples": 120,
-    "bananas": 50,
-}
+# items = {
+#     "milk": 60,
+#     "bread": 40,
+#     "eggs": 90,
+#     "butter": 250,
+#     "cheese": 180,
+#     "rice": 80,
+#     "flour": 45,
+#     "sugar": 42,
+#     "apples": 120,
+#     "bananas": 50,
+# }
 
-print("available items:")
-for product, price in items.items():
-    print(f"- {product}: ₹{price}")
+# print("available items:")
+# for product, price in items.items():
+#     print(f"- {product}: ₹{price}")
 
-user_choice = input("haji bolo: ").strip().lower()
-selected_items = [item.strip() for item in user_choice.replace(",", " ").split()]
+# user_choice = input("haji bolo: ").strip().lower()
+# selected_items = [item.strip() for item in user_choice.replace(",", " ").split()]
 
-valid_items = []
-for item in selected_items:
-    if item in items:
-        valid_items.append(item)
-    else:
-        print("kone")
-
-
-
-if not valid_items:
-    print("abanu his khtm huyo , sham tk ahjajiyo")
-else:
-    name = input("naam bolo: ")
-    print("recipt lelo")
-
-    print("========================================")
-    print(f"           {name.upper()}         ")
-    print("           OFFICIAL RECEIPT                 ")
-    print("========================================")
-
-    subtotal = 0
-    for item in valid_items:
-        try:
-            qty = int(input(f"khatri {item}: "))
-            if qty <= 0:
-                raise ValueError
-            print("lo sa")
-        except ValueError:
-            print("invalid quantity, please enter a positive number")
-            continue
-
-        item_price = items[item]
-        item_total = item_price * qty
-        subtotal += item_total
-        print(f"{item:<12}: @{item_price} x {qty} = ₹{item_total:.2f}")
-
-    print("----------------------------------------")
-
-    tax_rate = 0.08
-    tax_amount = tax_rate * subtotal
-    grand_total = subtotal + tax_amount
-    print(f"subtotal = ₹{subtotal:.2f}")
-    print(f"tax_amount = ₹{tax_amount:.2f}")
-    print(f"grand_total = ₹{grand_total:.2f}")
-    print("----------------------------------------")
-    print("thank you for shopping")
+# valid_items = []
+# for item in selected_items:
+#     if item in items:
+#         valid_items.append(item)
+#     else:
+#         print("kone")
 
 
 
+# if not valid_items:
+#     print("abanu his khtm huyo , sham tk ahjajiyo")
+# else:
+#     name = input("naam bolo: ")
+#     print("recipt lelo")
+
+#     print("========================================")
+#     print(f"           {name.upper()}         ")
+#     print("           OFFICIAL RECEIPT                 ")
+#     print("========================================")
+
+#     subtotal = 0
+#     for item in valid_items:
+#         try:
+#             qty = int(input(f"khatri {item}: "))
+#             if qty <= 0:
+#                 raise ValueError
+#             print("lo sa")
+#         except ValueError:
+#             print("invalid quantity, please enter a positive number")
+#             continue
+
+#         item_price = items[item]
+#         item_total = item_price * qty
+#         subtotal += item_total
+#         print(f"{item:<12}: @{item_price} x {qty} = ₹{item_total:.2f}")
+
+#     print("----------------------------------------")
+
+#     tax_rate = 0.08
+#     tax_amount = tax_rate * subtotal
+#     grand_total = subtotal + tax_amount
+#     print(f"subtotal = ₹{subtotal:.2f}")
+#     print(f"tax_amount = ₹{tax_amount:.2f}")
+#     print(f"grand_total = ₹{grand_total:.2f}")
+#     print("----------------------------------------")
+#     print("thank you for shopping")
+
+# for i in range(6):
+    # print(i)
+    # if i == 4:
+        # break
+
+# else:
+    # print('sorry no i')
+# i = 0
+# while i<8:
+    # print(i)
+    # i = i+1
+# else:
+    # print('sorry no i')    
+
+# for x in range(8):
+    # print(f"this is no {x+1}")
+# else:
+    # print("that's it")    
+try:
+    numm = int(input("enter a number: "))
+    a = [2,5]
+    print(a[numm])
+except ValueError:
+    print("Invalid integer input")
+except IndexError:
+    print("Index out of range")
 
 
 

@@ -1297,16 +1297,147 @@
     # print(f"this is no {x+1}")
 # else:
     # print("that's it")    
+# try:
+#     numm = int(input("enter a number: "))
+#     a = [2,5]
+#     print(a[numm])
+# except ValueError:
+#     print("Invalid integer input")
+# except IndexError:
+#     print("Index out of range")
+
+# student_data = {
+#     "Aastha": {
+#         "Python": 99,
+#         "Math": 98,
+#         "Database": 95
+#     },
+#     "Rohan": {
+#         "Python": 78,
+#         "Math": 82,
+#         "Database": 80
+#     },
+#     "Priya": {
+#         "Python": 95,
+#         "Math": 91,
+#         "Database": 89
+#     },
+#     "Rahul": {
+#         "Python": 65,
+#         "Math": 70,
+#         "Database": 72
+#     },
+#     "Neha": {
+#         "Python": 90,
+#         "Math": 91,
+#         "Database": 80
+#     }
+# }
+
+# top_student = ""
+# highest_avg = 0
+
+# for name , subject in student_data.items():
+#         # print(f"{name} {subject}")
+#         score = subject.values()
+#         total_score = sum(score)
+#         avg = total_score / len(score)
+
+#         if avg >= 90:
+#                 grade = 'A'
+#         elif avg >=80:
+#                 grade = 'B' 
+#         elif avg >=70:
+#                 grade = 'C'
+#         else:
+#                 grade = 'D'
+#         print(f"{name:<12}- average: {avg:.2f}% | grade: {grade}")
+
+#         if avg > highest_avg:
+#                 highest_avg = avg
+#                 top_student = name 
+
+# print(f"Class Topper is {top_student} with {highest_avg:.2f}%!")        
+# import time
+
+# print("----grocery bill----")
+# current_time = time.localtime()
+# if current_time.tm_hour >= 0 and current_time.tm_hour < 12:
+#     print("good morning")
+# elif current_time.tm_hour >= 12 and current_time.tm_hour < 16:
+#     print("good afternoon")
+# else:
+#     print("good eveing")       
+
+# print("put all your items here")
+
+# cart = [
+#     {"item": "Milk", "price": 50, "quantity": 2},
+#     {"item": "Bread", "price": 30, "quantity": 1},
+#     {"item": "Eggs", "price": 6, "quantity": 12},
+#     {"item": "Butter", "price": 100, "quantity": 1}
+# ]
+
+# subtotal = 0
+# tax_rate = 0.08
+# name = input("your name please: ")
+# print("========================================")
+# print(f"           {name.upper()}         ")
+# print("           OFFICIAL RECEIPT                 ")
+# print("========================================")
+
+# for item in cart:
+#     item_total = item["price"] * item["quantity"]
+#     subtotal += item_total
+#     print(f"{item['item']:<12} {item['quantity']} @{item['price']:.2f} = {item_total:.2f}")
+
+# tax_amount = subtotal * tax_rate
+# grand_total = tax_amount + subtotal
+# print(f"tax_rate: {tax_rate}")
+# print(f"subtotal: {subtotal:.2f}")
+# print(f"grand total: {grand_total:.2f}.")
+# def func1():
+#     try:
+#         l =[1, 3, 5, 6]
+#         i = int(input('enter index: '))
+#         print(l[i])
+#         return 1
+#     except:
+#         print("error")
+#         return 0
+
+#     finally:
+#         print("permanent")
+# print("sameeeeeee")    
+
+# x = func1()
+# print(x)
+
+# try:
+    # l = [1, 3, 5, 7]
+    # a = int(input("enter index: "))
+    # print(l[a])
+# except:
+    # print("index in l only")
+    # raise IndexError("value should be under l index range")
+
+
+class MinorError(Exception):
+    pass
+
+def voting_eligiblity(age):
+    if age<18:
+        raise MinorError("age must be greater than 18")
+    else:
+        print("eligible for voting")
+       
+
 try:
-    numm = int(input("enter a number: "))
-    a = [2,5]
-    print(a[numm])
-except ValueError:
-    print("Invalid integer input")
-except IndexError:
-    print("Index out of range")
-
-
-
+    age = int(input("enter your age: "))
+    voting_eligiblity(age)
+except MinorError as error:
+    print(f"error caught: {error}")
+except ValueError:      
+    print("enter valid age")     
 
 

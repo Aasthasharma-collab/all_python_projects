@@ -29,3 +29,6 @@ elif user_choice == "decode":
             new_words.append(word[::-1])
     result = " ".join(new_words)
     print(f"decoded word: {result}")
+else:
+    print("inavlid option! please choose 'encode' or 'decode'".title())
+

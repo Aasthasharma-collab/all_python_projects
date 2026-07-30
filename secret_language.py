@@ -21,7 +21,7 @@ if user_choice == "encode":
 
 elif user_choice == "decode":
     for word in words:
-        if len(word) >= 6:
+        if len(word) >= 3:
             stripped_word = word[3:-3]
             decoded_word = stripped_word[-1] + stripped_word[:-1]
             new_words.append(decoded_word)

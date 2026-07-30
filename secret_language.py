@@ -1,7 +1,9 @@
 import random
 import string
 
-print("----secret language coding and decoding----")
+print("=" * 45)
+print("   🔒 SECRET LANGUAGE ENCODER & DECODER 🔓")
+print("=" * 45)
 user_message = input("enter your message: ")
 user_choice = input("encode or decode?: ").strip().lower()
 

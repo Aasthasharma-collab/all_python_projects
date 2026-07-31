@@ -1440,34 +1440,125 @@
 # except ValueError:      
 #     print("enter valid age")     
 
-import random
-import string
+# import random
+# import string
 
-print("----secret language coding and decoding----")
-user_message = input("enter your message: ")
-user_choice = input("encode or decode?: ").strip().lower()
+# print("----secret language coding and decoding----")
+# user_message = input("enter your message: ")
+# user_choice = input("encode or decode?: ").strip().lower()
 
-words = user_message.split()
-new_words = []
-if user_choice == "encode":
-    for word in words:
-        if len(word) >= 3:
-            r1 = "".join(random.choices(string.ascii_lowercase, k=3))
-            r2 = "".join(random.choices(string.ascii_lowercase, k=3))
-            encoded_word = r1 + word[1:] + word[0] + r2
-            new_words.append(encoded_word)
-        else:
-            new_words.append(word[::-1])
-    result = " ".join(new_words)
-    print(f"encoded word : {result} ")
+# words = user_message.split()
+# new_words = []
+# if user_choice == "encode":
+#     for word in words:
+#         if len(word) >= 3:
+#             r1 = "".join(random.choices(string.ascii_lowercase, k=3))
+#             r2 = "".join(random.choices(string.ascii_lowercase, k=3))
+#             encoded_word = r1 + word[1:] + word[0] + r2
+#             new_words.append(encoded_word)
+#         else:
+#             new_words.append(word[::-1])
+#     result = " ".join(new_words)
+#     print(f"encoded word : {result} ")
 
-elif user_choice == "decode":
-    for word in words:
-        if len(word) >= 6:
-            stripped_word = word[3:-3]
-            decoded_word = stripped_word[-1] + stripped_word[:-1]
-            new_words.append(decoded_word)
-        else:
-            new_words.append(word[::-1])
-    result = " ".join(new_words)
-    print(f"decoded word: {result}")
+# elif user_choice == "decode":
+#     for word in words:
+#         if len(word) >= 6:
+#             stripped_word = word[3:-3]
+#             decoded_word = stripped_word[-1] + stripped_word[:-1]
+#             new_words.append(decoded_word)
+#         else:
+#             new_words.append(word[::-1])
+#     result = " ".join(new_words)
+#     print(f"decoded word: {result}")
+
+# a = 11
+# b = 100
+# print('A')if a>b else print('=') if a == b else print('B')
+
+# C = 2009 if a < b else ''
+# print(C)
+
+# flag = True if 2 * 4 == 8 else False
+# print(flag)
+# result = True if 2 * 4 == 8 else False
+# print(result)
+
+# marks = [1, 60, 45, 98, 76, 67, 28]
+# index = 0
+# for mark in marks:
+#     print(mark)
+#     if(index == 3):
+#         print("INDEX IS 3")
+#     index +=1
+
+# marks = [1, 60, 45, 98, 76, 67, 28]
+# for index,mark in enumerate(marks):
+#     print(mark)
+#     print(index,mark)
+
+# fruits = ["apple", "mango"]
+# for index , fruit in enumerate(fruits, start= 1):
+#     print(index, fruit)
+
+# words = ["python", "java", "c++", "ruby", "javascript"]
+# for index, word in enumerate(words):
+    # if index % 2 != 0:
+        # print(index , word)
+
+# scores = [45, 88, 72, 30, 95]
+# for index,score in enumerate(scores):
+#     status = "passed" if score >=50 else "failed"
+#     print(f"#{index}: {status} {score}")
+    # or
+    # print()
+    # print(f"{index}: {'passed' if score >=50 else 'failed'}")
+# n = int(input("enter your number: "))
+# for n in range(0, n+1 ):
+#     print(n ** 2)
+# def is_leap(year):
+#     if year % 4 !=0:
+#         print(False)
+#     else:
+#         (True)
+#     # Write your logic here
+# year = int(input())
+# print(is_leap(year))
+# is_leap(1990)
+
+import math
+from math import sqrt, pi 
+from math import *
+import math as m
+from math import sqrt as s
+from math import pi as p
+import math as math_builtin_python
+result = math_builtin_python.sqrt(9) * math_builtin_python.pi
+print(result)
+
+import math
+print(dir(math))
+print(math.nan, type(math.nan))
+print(type(math.sin))
+result = m.sqrt(7)
+
+# def hie():
+#     print("how are you")
+
+# aastha = "is learning python"
+
+# def hie():
+    # print("how are you")
+
+
+# aastha = "is learning python"
+
+# from calculator import hie, aastha
+# from calculator import *
+# import calculator as cl
+# print(cl.aastha)
+# cl.hie()
+
+
+
+

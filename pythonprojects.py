@@ -1526,21 +1526,21 @@
 # print(is_leap(year))
 # is_leap(1990)
 
-import math
-from math import sqrt, pi 
-from math import *
-import math as m
-from math import sqrt as s
-from math import pi as p
-import math as math_builtin_python
-result = math_builtin_python.sqrt(9) * math_builtin_python.pi
-print(result)
+# import math
+# from math import sqrt, pi 
+# from math import *
+# import math as m
+# from math import sqrt as s
+# from math import pi as p
+# import math as math_builtin_python
+# result = math_builtin_python.sqrt(9) * math_builtin_python.pi
+# print(result)
 
-import math
-print(dir(math))
-print(math.nan, type(math.nan))
-print(type(math.sin))
-result = m.sqrt(7)
+# import math
+# print(dir(math))
+# print(math.nan, type(math.nan))
+# print(type(math.sin))
+# result = m.sqrt(7)
 
 # def hie():
 #     print("how are you")
@@ -1560,5 +1560,38 @@ result = m.sqrt(7)
 # cl.hie()
 
 
+# n = int(input())
+# for i in range(1, n + 1):
+#     print(i)
 
+# n = int(input())
+# arr = list(map(int, input().split()))
+# arr = set(arr)
+# dec = sorted(arr, reverse=True)
+# # list(arr)
+# winner = dec[0]
+# runner_up = dec[1]
+# print(runner_up)
 
+# for _ in range(int(input())):
+#     name = input()
+#     score = float(input())
+#     name_chars = [name, score]
+#     aec = sorted(name_chars)
+#     second_lowest_student = aec[1]
+
+students = []
+scores = []
+for _ in range(int(input())):
+    name = input()
+    score = float(input())
+    students.append([name, score])
+    scores.append(score)
+
+unique_scores = sorted(set(scores))
+second_lowest_score = unique_scores[1]
+
+students.sort()
+for student in students:
+    if student[1] == second_lowest_score:
+        print(student[0])

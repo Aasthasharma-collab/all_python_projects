@@ -25,11 +25,11 @@ team_a_score=[200, 219, 300, 298, 167, 315, 198]
 team_b_score=(199, 225, 154, 369, 149, 259, 121)
 print("-----proccessing team a score----".title())
 proccessing_leaderboard(team_a_score)
-score_statics(team_a_score)
+score_statistics(team_a_score)
 
 print()
 print("-----processing team b score-----".title())
 proccessing_leaderboard(team_b_score)
-score_statics(team_b_score)
+score_statistics(team_b_score)
 
 print()

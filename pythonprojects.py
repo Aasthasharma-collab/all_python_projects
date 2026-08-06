@@ -1449,6 +1449,8 @@
 
 # words = user_message.split()
 # new_words = []
+
+
 # if user_choice == "encode":
 #     for word in words:
 #         if len(word) >= 3:
@@ -1580,18 +1582,76 @@
 #     aec = sorted(name_chars)
 #     second_lowest_student = aec[1]
 
-students = []
-scores = []
-for _ in range(int(input())):
-    name = input()
-    score = float(input())
-    students.append([name, score])
-    scores.append(score)
+# students = []
+# scores = []
+# for _ in range(int(input())):
+#     name = input()
+#     score = float(input())
+#     students.append([name, score])
+#     scores.append(score)
 
-unique_scores = sorted(set(scores))
-second_lowest_score = unique_scores[1]
+# unique_scores = sorted(set(scores))
+# second_lowest_score = unique_scores[1]
 
-students.sort()
-for student in students:
-    if student[1] == second_lowest_score:
-        print(student[0])
+# students.sort()
+# for student in students:
+#     if student[1] == second_lowest_score:
+#         print(student[0])
+
+
+# import os
+# if(not os.path.exists("data")):
+#     os.mkdir("data")
+
+# print(os.getcwd())
+
+# for i in range(0, 10):
+#     folder_path = f"data/day{i+1}"
+#     if not os.path.exists(folder_path):
+#         os.mkdir(folder_path)
+#     # os.rename(folder_path, f"data/day_{i+1}")
+#     folder =  os.listdir("data")
+#     for folde in folder:
+#         print(folde) 
+
+# x = 10 #global variable
+
+# def my_function():
+#     global x
+#     x = 15 #modifying the global variable
+#     y = 20 #local variable
+#     print(y)
+
+# my_function()
+# print(x)  # This will print 15, as x was modified within the function
+
+
+# f = open("data/day1/sample.txt", "w")
+# f.write("Hello, World!\n")
+
+# f = open('work.py', 'w')
+# f.write('Hie barbiee')
+# f.close()
+
+# f = open('work.py', 'r')
+# content = f.read()
+# print(content)
+# f.close()
+
+# f = open('work.py', 'a')
+# f.write('hie ken')
+# f.close()  
+
+# with open('work.py', 'r') as a:
+#     content = a.read()
+#     print(content)
+
+f = open('work.py', 'r')
+i = 0
+while True:
+    i = i+1
+    line = f.readline()
+    if not line:
+        break
+    print(f"line {i}: {line.strip()}")
+f.close()

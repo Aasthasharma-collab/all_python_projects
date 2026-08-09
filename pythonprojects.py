@@ -1646,12 +1646,55 @@
 #     content = a.read()
 #     print(content)
 
-f = open('work.py', 'r')
-i = 0
-while True:
-    i = i+1
-    line = f.readline()
-    if not line:
-        break
-    print(f"line {i}: {line.strip()}")
-f.close()
+# f = open('work.py', 'r')
+# i = 0
+# while True:
+#     i = i+1
+#     line = f.readline()
+#     if not line:
+#         break
+#     print(f"line {i}: {line.strip()}")
+# f.close()
+
+# f = open('work.py', 'w')
+# f.write('"hie barbiee"')
+# f.close()
+
+# # f = open('work.py', 'r')
+# # content = f.read()
+# # print(content)
+# # f.close()
+
+# f = open('work.py', 'a')
+# f.write('"hie ken"\n'
+# '"wanna go for a ride"\n'
+# '"sure ken"')
+# f.close()
+
+# with open('work.py', 'r')as f:
+#     content = f.read()
+#     print(content)
+
+# with open ('work.py', 'r')as f:
+#    i = 0
+#    while True:
+#        i = i+1
+#        line = f.readline()
+#        if not line:
+#            break
+#        print(f"line {i}: {line.strip()}")
+with open('work.py', 'r+') as f:
+     f.truncate(6)  # Truncate the file to 6 bytes
+     print(type(f))
+     f.seek(5)
+     print(f.tell())
+     data = f.read(10)
+     print(data)
+     print(f"file truncated to 10 bytes. Current file size: {f.tell()} bytes")
+     f.seek(0)  # Move the file pointer back to the beginning
+     data = f.read()  # Read the remaining content after truncation
+     f.truncate(5)
+     f.seek(0)
+     data = f.read()
+     print(data)
+     # print(data)  # This will read the remaining content after truncation

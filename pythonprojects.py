@@ -1683,18 +1683,102 @@
 #        if not line:
 #            break
 #        print(f"line {i}: {line.strip()}")
-with open('work.py', 'r+') as f:
-     f.truncate(6)  # Truncate the file to 6 bytes
-     print(type(f))
-     f.seek(5)
-     print(f.tell())
-     data = f.read(10)
-     print(data)
-     print(f"file truncated to 10 bytes. Current file size: {f.tell()} bytes")
-     f.seek(0)  # Move the file pointer back to the beginning
-     data = f.read()  # Read the remaining content after truncation
-     f.truncate(5)
-     f.seek(0)
-     data = f.read()
-     print(data)
-     # print(data)  # This will read the remaining content after truncation
+# with open('work.py', 'r+') as f:
+#      f.truncate(6)  # Truncate the file to 6 bytes
+#      print(type(f))
+#      f.seek(5)
+#      print(f.tell())
+#      data = f.read(10)
+#      print(data)
+    #  print(f"file truncated to 10 bytes. Current file size: {f.tell()} bytes")
+    #  f.seek(0)  # Move the file pointer back to the beginning
+    #  data = f.read()  # Read the remaining content after truncation
+    #  f.truncate(5)
+    #  f.seek(0)
+    #  data = f.read()
+    #  print(data)
+       # print(data)  # This will read the remaining content after truncation
+
+# double = lambda x: x*2
+# cube = lambda x: x**3
+# avg = lambda x,y : (x+y)/2
+# print(avg(9,8))
+# print(cube(3))
+# print(double(4))
+
+# def appl(fx, value):
+#     return 6 + fx(value)
+
+# print(appl(cube, 8))
+# print(appl(double, 5))
+# print(appl(lambda x: x**4, 2))
+# print(appl(lambda x: x**3, 2))
+
+
+# with open('work.py', 'w') as f:
+#     f.write("'how are you?'\n967286 , 'i am fine'\n'what about you?'\n'good to hear that'\n'yes i am good too'")
+#     print(f.tell())
+    # f.seek(0)
+    # data = f.readline()
+    # print(data)
+
+l = [1, 9, 6, 2, 5, 3, 8, 4, 7]
+# newl = sorted(l)
+# print(newl)
+# newl = sorted(l, reverse=True)
+# print(newl)
+# newl = sorted(l, key=lambda x: x%3)
+# print(newl)
+# newl = list(map(lambda x: x**2, l))
+# print(newl)
+# newl = list(filter(lambda x: x%2==0, l))
+# print(newl)
+# newl = list(map(lambda x: x**2, filter(lambda x: x%2==0, l)))
+# print(newl)
+# newl = list(map(lambda x: x**2, filter(lambda x: x%2==0, sorted(l))))
+# print(newl)l
+# newl = list(map(lambda x: x**2, filter(lambda x: x%2==0, sorted(l, reverse=True))))
+# print(newl)
+# cube = lambda x: x**3
+# newl = list(map(cube,l))
+# print(newl)
+# def filter_even(x):
+#     return x%2==0
+# newl = list(filter(filter_even, l))
+# print(newl)
+
+# from functools import reduce
+
+# # result = reduce(lambda x, y: x + y, [1, 2, 3, 4])
+# # print(result)
+
+# def mysum(x, y):
+#     return x +y
+
+# newl = reduce(mysum , l)
+# print(newl)
+
+# for i in range(1, 5):
+     # print(str(i) * i)
+#         print((str(i) + " ")* i)
+
+import random
+
+secret_number = random.randint(1, 100)
+print("----random number guessing game----")
+print("I have selected a number between 1 and 100. Try to guess it!")
+print("You have 5 attempts to guess the correct number.")
+user_input = int(input("Enter your guess: "))
+if user_input != secret_number:
+    for attempt in range(1, 5):
+        user_input = int(input(f"Attempt {attempt + 1}: Enter your guess: \n"))
+        if user_input == secret_number:
+            print("Congratulations! You guessed the correct number.")
+            break
+        elif user_input < secret_number:
+            print("Too low! Try guessing a higher number.")
+        else:
+            print("Too high! Try guessing a lower number.")
+    else:
+        print(f"Sorry, you've used all attempts. The correct number was {secret_number}.")    
+
